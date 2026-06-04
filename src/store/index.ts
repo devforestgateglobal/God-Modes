@@ -350,8 +350,8 @@ export const useStore = create<AppState>()(
     (set, get) => ({
       // Initial state
       theme: 'matrix',
-      apiKey: '',
-      defaultModel: 'anthropic/claude-opus-4.6',
+      apiKey: process.env.NEXT_PUBLIC_OPENROUTER_API_KEY || '',
+      defaultModel: 'anthropic/claude-3.5-sonnet',
       conversations: [],
       currentConversationId: null,
       isHydrated: false,
